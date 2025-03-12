@@ -5,10 +5,8 @@ import ParticlesBackground from "./components/Particles";
 function App() {
   return (
     <>
-      {/* Fundo animado de partículas */}
       <ParticlesBackground />
 
-      {/* Conteúdo da aplicação */}
       <div className="relative z-10 flex flex-col min-h-screen">
         <Header />
         <div className="flex flex-grow justify-center items-start mt-20 px-6">

@@ -22,10 +22,10 @@ const ParticlesBackground = () => {
         fpsLimit: 120,
         particles: {
           color: {
-            value: "#166534", // Cor das partículas (verde-800 do Tailwind)
+            value: "#22964e", 
           },
           links: {
-            color: "#166534", // Cor das conexões entre partículas
+            color: "#166534",
             distance: 150,
             enable: true,
             opacity: 0.4,
@@ -43,7 +43,7 @@ const ParticlesBackground = () => {
             value: 80,
           },
           opacity: {
-            value: 0.4, // Deixei um pouco mais visível
+            value: 0.4, 
           },
           size: {
             value: { min: 1, max: 3 },

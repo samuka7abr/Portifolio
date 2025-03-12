@@ -35,11 +35,7 @@ export function Header() {
       {/* Navegação */}
       <nav>
         <ul className="flex gap-8 text-[16px] text-white/75">
-          <li>
-            <a href="#" className="hover:text-green-400 transition-all duration-300">
-              Home
-            </a>
-          </li>
+          
           <li>
             <a href="#" className="hover:text-green-400 transition-all duration-300">
               About

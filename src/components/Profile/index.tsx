@@ -9,7 +9,7 @@ export function Profile() {
           <img 
             src={foto} 
             alt="Foto de perfil" 
-            className="w-56 h-56 object-cover rounded-full" 
+            className="w-56 h-56 object-cover rounded-full object-top" 
           />
         </div>
 

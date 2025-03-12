@@ -4,6 +4,7 @@ import ParticlesBackground from "./components/Particles";
 import { Project } from "./components/Projects";
 import { Experience } from "./components/Experience";
 import { Skills } from "./components/Skills";
+import { Contact } from "./components/Contact";
 import { motion } from "framer-motion";
 
 export function App() {
@@ -74,7 +75,14 @@ export function App() {
 
         {/* Seção de Skills */}
         <section className="py-6 px-6 flex flex-col items-center">
+          
+
           <Skills />
+        </section>
+
+        {/* Seção de Contato */}
+        <section className="py-6 px-6 flex flex-col items-center">
+          <Contact />
         </section>
       </div>
     </>

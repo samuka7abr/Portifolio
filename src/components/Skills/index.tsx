@@ -7,6 +7,7 @@ import {
 } from "react-icons/si";
 import { VscVscodeInsiders } from "react-icons/vsc";
 import { BiLogoTailwindCss } from "react-icons/bi";
+import { useEffect, useState } from "react";
 
 const skills = [
   {
@@ -62,14 +63,31 @@ const skills = [
       { name: "Git", icon: SiGit },
       { name: "VS Code", icon: VscVscodeInsiders },
       { name: "Linux", icon: SiLinux },
-      { name: "Windows", icon: FaCogs }, // Fallback caso não tenha um ícone específico
+      { name: "Windows", icon: FaCogs },
     ],
   },
 ];
 
 export function Skills() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const section = document.getElementById("skills");
+      if (section) {
+        const rect = section.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.75) {
+          setIsVisible(true);
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <section className="py-24 px-6 flex flex-col items-center">
+    <section id="skills" className="py-24 px-6 flex flex-col items-center">
       <h2 className="text-3xl font-bold text-white text-center mb-8">
         Skills
       </h2>
@@ -77,7 +95,7 @@ export function Skills() {
       <motion.div
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-4xl"
         initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
+        animate={isVisible ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 1, ease: "easeOut" }}
       >
         {skills.map((group, index) => (

@@ -6,6 +6,7 @@ import { Experience } from "./components/Experience";
 import { Skills } from "./components/Skills";
 import { Contact } from "./components/Contact";
 import { motion } from "framer-motion";
+import { Footer } from "./components/Footer";
 
 export function App() {
   return (
@@ -84,6 +85,7 @@ export function App() {
         <section className="py-6 px-6 flex flex-col items-center">
           <Contact />
         </section>
+        <Footer />
       </div>
     </>
   );

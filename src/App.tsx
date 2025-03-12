@@ -9,12 +9,10 @@ function App() {
       <ParticlesBackground />
 
       {/* Conteúdo da aplicação */}
-      <div className="relative z-10">
+      <div className="relative z-10 flex flex-col min-h-screen">
         <Header />
-        <div className="h-screen flex justify-center items-center">
-          <div>
+        <div className="flex flex-grow justify-center items-start mt-20 px-6">
           <Profile />
-          </div>
         </div>
       </div>
     </>

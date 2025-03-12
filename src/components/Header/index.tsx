@@ -1,15 +1,17 @@
 import { motion } from "framer-motion";
-import { FaTerminal } from "react-icons/fa";
+import { FaTerminal, FaBars, FaTimes } from "react-icons/fa";
+import { useState } from "react";
 
 export function Header() {
+  const [isOpen, setIsOpen] = useState(false);
   const nome: string = "Samuel Abrão";
   const letters: string[] = nome.split("");
 
   return (
-    <header className="flex justify-between items-center px-12 py-4 bg-white/15 text-white border-b border-gray-700 border-b-gray-100/30">
+    <header className="w-full fixed top-0 left-0 z-50 bg-white/15 text-white border-b border-gray-700 border-b-gray-100/30 py-4 px-6 flex justify-between items-center">
       {/* Nome animado com ícone */}
-      <div className="flex items-center gap-3 text-3xl font-bold">
-        <FaTerminal className="text-green-400 text-[22px] text-4xl" />
+      <div className="flex items-center gap-3 text-2xl sm:text-3xl font-bold">
+        <FaTerminal className="text-green-400 text-4xl" />
 
         <motion.div className="flex text-[22px] md:text-xl overflow-hidden">
           {letters.map((letter, index) => (
@@ -32,37 +34,32 @@ export function Header() {
         </motion.div>
       </div>
 
-      {/* Navegação */}
-      <nav>
-        <ul className="flex gap-8 text-[16px] text-white/75">
-          
-          <li>
-            <a href="#" className="hover:text-green-400 transition-all duration-300">
-              About
-            </a>
-          </li>
-          <li>
-            <a href="#" className="hover:text-green-400 transition-all duration-300">
-              Projects
-            </a>
-          </li>
-          <li>
-            <a href="#" className="hover:text-green-400 transition-all duration-300">
-              Experience
-            </a>
-          </li>
-          <li>
-            <a href="#" className="hover:text-green-400 transition-all duration-300">
-              Skills
-            </a>
-          </li>
-          <li>
-            <a href="#" className="hover:text-green-400 transition-all duration-300">
-              Contact
-            </a>
-          </li>
-        </ul>
+      {/* Menu Desktop */}
+      <nav className="hidden sm:flex gap-8 text-[16px] text-white/75">
+        <a href="#" className="hover:text-green-400 transition-all duration-300">About</a>
+        <a href="#" className="hover:text-green-400 transition-all duration-300">Projects</a>
+        <a href="#" className="hover:text-green-400 transition-all duration-300">Experience</a>
+        <a href="#" className="hover:text-green-400 transition-all duration-300">Skills</a>
+        <a href="#" className="hover:text-green-400 transition-all duration-300">Contact</a>
       </nav>
+
+      {/* Menu Mobile */}
+      <div className="sm:hidden">
+        <button onClick={() => setIsOpen(!isOpen)} className="text-white text-3xl">
+          {isOpen ? <FaTimes /> : <FaBars />}
+        </button>
+      </div>
+
+      {/* Menu Responsivo Mobile */}
+      {isOpen && (
+        <nav className="absolute top-full left-0 w-full bg-black/90 text-white flex flex-col items-center py-4 gap-4 sm:hidden">
+          <a href="#" className="hover:text-green-400 transition-all duration-300">About</a>
+          <a href="#" className="hover:text-green-400 transition-all duration-300">Projects</a>
+          <a href="#" className="hover:text-green-400 transition-all duration-300">Experience</a>
+          <a href="#" className="hover:text-green-400 transition-all duration-300">Skills</a>
+          <a href="#" className="hover:text-green-400 transition-all duration-300">Contact</a>
+        </nav>
+      )}
     </header>
   );
 }

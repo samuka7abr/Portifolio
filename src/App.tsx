@@ -11,26 +11,22 @@ import { Footer } from "./components/Footer";
 export function App() {
   return (
     <>
-      {/* Fundo animado */}
       <ParticlesBackground />
 
-      <div className="relative z-10 flex flex-col min-h-screen">
-        {/* Header fixo */}
+      <div className="relative z-10 flex flex-col min-h-screen w-full">
         <Header />
 
-        {/* Perfil */}
-        <div className="flex flex-grow justify-center items-start mt-32 px-6">
+        {/* Perfil Responsivo */}
+        <div className="flex flex-grow justify-center items-center mt-32 px-4 sm:px-6 lg:mt-40 w-full max-w-screen-lg mx-auto">
           <Profile />
         </div>
 
-        {/* Seção de Projetos */}
-        <section className="py-24 px-6 flex flex-col items-center">
-          <h2 className="text-3xl font-bold text-white text-center mb-8">
-            Projects
-          </h2>
+        {/* Projetos Responsivos */}
+        <section className="py-16 px-4 sm:px-6 flex flex-col items-center w-full max-w-screen-lg mx-auto">
+          <h2 className="text-2xl sm:text-3xl font-bold text-white text-center mb-6 sm:mb-8">Projects</h2>
 
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl"
+            className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
@@ -65,27 +61,26 @@ export function App() {
           </motion.div>
         </section>
 
-        {/* Seção de Experiência */}
-        <section className="py-6 px-6 flex flex-col items-center">
-          <h2 className="text-3xl font-bold text-white text-center mb-8">
-            Experience
-          </h2>
-
+        {/* Seção de Experiência Responsiva */}
+        <section className="py-12 px-4 sm:px-6 flex flex-col items-center w-full max-w-screen-lg mx-auto">
+          <h2 className="text-2xl sm:text-3xl font-bold text-white text-center mb-6 sm:mb-8">Experience</h2>
           <Experience />
         </section>
 
-        {/* Seção de Skills */}
-        <section className="py-6 px-6 flex flex-col items-center">
-          
-
+        {/* Seção de Skills Responsiva */}
+        <section className="py-12 px-4 sm:px-6 flex flex-col items-center w-full max-w-screen-lg mx-auto">
           <Skills />
         </section>
 
-        {/* Seção de Contato */}
-        <section className="py-6 px-6 flex flex-col items-center">
+        {/* Seção de Contato Responsiva */}
+        <section className="py-12 px-4 sm:px-6 flex flex-col items-center w-full max-w-screen-lg mx-auto">
           <Contact />
         </section>
-        <Footer />
+
+        {/* Footer Responsivo */}
+        <section className="w-full">
+          <Footer />
+        </section>
       </div>
     </>
   );

@@ -3,6 +3,7 @@ import { Profile } from "./components/Profile";
 import ParticlesBackground from "./components/Particles";
 import { Project } from "./components/Projects";
 import { Experience } from "./components/Experience";
+import { Skills } from "./components/Skills";
 import { motion } from "framer-motion";
 
 export function App() {
@@ -62,13 +63,18 @@ export function App() {
           </motion.div>
         </section>
 
-        {/* Seção de Experiência - Ajustada para mesma distância do Profile */}
+        {/* Seção de Experiência */}
         <section className="py-6 px-6 flex flex-col items-center">
           <h2 className="text-3xl font-bold text-white text-center mb-8">
             Experience
           </h2>
 
           <Experience />
+        </section>
+
+        {/* Seção de Skills */}
+        <section className="py-6 px-6 flex flex-col items-center">
+          <Skills />
         </section>
       </div>
     </>

@@ -11,7 +11,7 @@ interface ProjectProps {
 export function Project({ title, description, techs, repoLinks }: ProjectProps) {
   return (
     <motion.div
-      className="p-6 bg-gray-800 rounded-lg shadow-lg"
+      className="p-6 bg-gray-800/85 rounded-lg shadow-lg"
       whileHover={{ scale: 1.05 }}
       transition={{ type: "spring", stiffness: 200, damping: 10 }}
     >

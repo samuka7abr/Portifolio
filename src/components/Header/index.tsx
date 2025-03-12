@@ -6,7 +6,7 @@ export function Header() {
   const letters: string[] = nome.split("");
 
   return (
-    <header className="flex justify-between items-center px-12 py-4 bg-gray-900/85 text-white border-b border-gray-700 border-b-gray-100/30">
+    <header className="flex justify-between items-center px-12 py-4 bg-white/15 text-white border-b border-gray-700 border-b-gray-100/30">
       {/* Nome animado com ícone */}
       <div className="flex items-center gap-3 text-3xl font-bold">
         <FaTerminal className="text-green-400 text-[22px] text-4xl" />
@@ -48,12 +48,12 @@ export function Header() {
           </li>
           <li>
             <a href="#" className="hover:text-green-400 transition-all duration-300">
-              Skills
+              Experience
             </a>
           </li>
           <li>
             <a href="#" className="hover:text-green-400 transition-all duration-300">
-              Tools
+              Skills
             </a>
           </li>
           <li>

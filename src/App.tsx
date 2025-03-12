@@ -2,26 +2,31 @@ import { Header } from "./components/Header";
 import { Profile } from "./components/Profile";
 import ParticlesBackground from "./components/Particles";
 import { Project } from "./components/Projects";
+import { Experience } from "./components/Experience";
 import { motion } from "framer-motion";
 
 export function App() {
   return (
     <>
+      {/* Fundo animado */}
       <ParticlesBackground />
 
       <div className="relative z-10 flex flex-col min-h-screen">
+        {/* Header fixo */}
         <Header />
 
-        <div className="flex flex-grow justify-center items-start mt-20 px-6">
+        {/* Perfil */}
+        <div className="flex flex-grow justify-center items-start mt-32 px-6">
           <Profile />
         </div>
 
-        <section className="py-20 px-6 flex flex-col items-center">
+        {/* Seção de Projetos */}
+        <section className="py-24 px-6 flex flex-col items-center">
           <h2 className="text-3xl font-bold text-white text-center mb-8">
             Projects
           </h2>
 
-          <motion.div 
+          <motion.div
             className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -55,6 +60,15 @@ export function App() {
               repoLinks={["https://github.com/samuka7abr/API-e-commerce"]}
             />
           </motion.div>
+        </section>
+
+        {/* Seção de Experiência - Ajustada para mesma distância do Profile */}
+        <section className="py-6 px-6 flex flex-col items-center">
+          <h2 className="text-3xl font-bold text-white text-center mb-8">
+            Experience
+          </h2>
+
+          <Experience />
         </section>
       </div>
     </>

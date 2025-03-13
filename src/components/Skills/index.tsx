@@ -14,8 +14,8 @@ const skills = [
     category: "Languages",
     icon: FaCode,
     techs: [
-      { name: "JavaScript", icon: SiJavascript },
-      { name: "TypeScript", icon: SiTypescript },
+      { name: "JS", icon: SiJavascript },
+      { name: "TS", icon: SiTypescript },
       { name: "Python", icon: SiPython },
       { name: "C", icon: FaCode },
       { name: "SQL", icon: FaDatabase },
@@ -35,7 +35,7 @@ const skills = [
     icon: FaServer,
     techs: [
       { name: "Node.js", icon: SiNodedotjs },
-      { name: "Express.js", icon: SiExpress },
+      { name: "Express", icon: SiExpress },
       { name: "Flask", icon: SiFlask },
     ],
   },

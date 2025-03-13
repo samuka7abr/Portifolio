@@ -33,7 +33,7 @@ export function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
           >
-            <Project title="MoovieNotes" description="Back-end app for Moovie-rating-notes management." techs={["Node.Js", "Javascript", "Knex.Js"]} repoLinks={["https://github.com/samuka7abr/MoviesNotes"]} />
+            <Project title="MovieNotes" description="Back-end app for Movie-rating-notes management." techs={["Node.Js", "Javascript", "Knex.Js"]} repoLinks={["https://github.com/samuka7abr/MoviesNotes"]} />
             <Project title="Block-Bet Extension" description="A Chrome extension to block illegal betting sites." techs={["JavaScript", "Manifest V3", "Chrome API"]} repoLinks={["https://github.com/samuka7abr/Block-Bet_Extension"]} />
             <Project title="Notes Manager" description="A full-stack note management application." techs={["React", "Node.Js", "Javascript", "Knex.Js"]} repoLinks={["https://github.com/samuka7abr/NotesManagerWeb", "https://github.com/samuka7abr/NotesManagerAPI"]} />
             <Project title="E-commerce API" description="A RESTful API for an e-commerce platform." techs={["Python", "Flask", "SQLAlchemy"]} repoLinks={["https://github.com/samuka7abr/API-e-commerce"]} />

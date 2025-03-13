@@ -12,7 +12,7 @@ const experiences: ExperienceProps[] = [
     role: "Full-Stack Developer",
     company: "FreeLance",
     period: "2024.1 - Present",
-    description: "Developing scalable applications with React(Styled-Components & Taiwind CSS) NodeJs(Express, KnexJs) and Python(Flask, SQLAlchemy).",
+    description: "Developing scalable applications with React(Styled-Components & Tailwind CSS) NodeJs(Express, KnexJs) and Python(Flask, SQLAlchemy).",
   },
   {
     role: "Inovation HUB",

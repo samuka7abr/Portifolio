@@ -27,17 +27,32 @@ export function App() {
             Projects
           </h2>
 
-          <motion.div
-            className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-          >
-            <Project title="MovieNotes" description="Back-end app for Movie-rating-notes management." techs={["Node.Js", "Javascript", "Knex.Js"]} repoLinks={["https://github.com/samuka7abr/MoviesNotes"]} />
-            <Project title="Block-Bet Extension" description="A Chrome extension to block illegal betting sites." techs={["JavaScript", "Manifest V3", "Chrome API"]} repoLinks={["https://github.com/samuka7abr/Block-Bet_Extension"]} />
-            <Project title="Notes Manager" description="A full-stack note management application." techs={["React", "Node.Js", "Javascript", "Knex.Js"]} repoLinks={["https://github.com/samuka7abr/NotesManagerWeb", "https://github.com/samuka7abr/NotesManagerAPI"]} />
-            <Project title="E-commerce API" description="A RESTful API for an e-commerce platform." techs={["Python", "Flask", "SQLAlchemy"]} repoLinks={["https://github.com/samuka7abr/API-e-commerce"]} />
-          </motion.div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
+            <Project 
+              title="DishOrderAPI" 
+              description="RESTful API for managing restaurant orders, dishes and users in a digital restaurant system." 
+              techs={["Node.js", "JavaScript", "SQLite", "Knex.js"]} 
+              repoLinks={["https://github.com/samuka7abr/Dish-Order-Service"]} 
+            />
+            <Project 
+              title="Alma Djem Band Site" 
+              description="Institutional website and musical portfolio for Alma Djem band with modern design and responsive interface." 
+              techs={["React", "TypeScript", "Styled-Components", "Framer Motion"]} 
+              repoLinks={["https://github.com/samuka7abr/Alma-Djem", "https://github.com/samuka7abr/Alma-Djem-Forms-API"]} 
+            />
+            <Project 
+              title="Mini FFmpeg" 
+              description="A lightweight FFmpeg implementation for video processing and manipulation." 
+              techs={["C", "Assembly", "ShellScript"]} 
+              repoLinks={["https://github.com/samuka7abr/mini-FFmpeg"]} 
+            />
+            <Project 
+              title="E-commerce API" 
+              description="A RESTful API for an e-commerce platform." 
+              techs={["Python", "Flask", "SQLAlchemy", "SQLite"]} 
+              repoLinks={["https://github.com/samuka7abr/API-e-commerce"]} 
+            />
+          </div>
         </section>
 
         {/* Seção de Experiência Responsiva */}

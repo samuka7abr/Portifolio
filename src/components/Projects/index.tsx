@@ -12,8 +12,12 @@ export function Project({ title, description, techs, repoLinks }: ProjectProps) 
   return (
     <motion.div
       className="p-6 bg-gray-800/85 rounded-lg shadow-lg"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3, margin: "-50px" }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
       whileHover={{ scale: 1.05 }}
-      transition={{ type: "spring", stiffness: 200, damping: 10 }}
+      whileHoverTransition={{ type: "spring", stiffness: 200, damping: 10 }}
     >
       <div className="flex justify-between items-start">
         <h3 className="text-xl font-bold text-white">{title}</h3>

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 interface ExperienceProps {
   role: string;
@@ -7,12 +8,25 @@ interface ExperienceProps {
   description: string;
 }
 
+interface FreelanceProject {
+  title: string;
+  description: string;
+  link?: string;
+  technologies: string;
+}
+
 const experiences: ExperienceProps[] = [
+  {
+    role: "TSE Intern",
+    company: "TSE",
+    period: "2025.1 - Present",
+    description: "Working in the SGWEB area developing Front-End solutions, API integration, relational databases, REST APIs, Docker and other technologies using TypeScript, React, Tailwind CSS and Node.js.",
+  },
   {
     role: "Full-Stack Developer",
     company: "FreeLance",
     period: "2024.1 - Present",
-    description: "Developing scalable applications with React(Styled-Components & Tailwind CSS) NodeJs(Express, KnexJs) and Python(Flask, SQLAlchemy).",
+    description: "Developing scalable applications with NodeJs(Express, Fastify, KnexJs), Docker, PostgreSQL, React(Styled-Components & Tailwind CSS) and Python(Flask, SQLAlchemy).",
   },
   {
     role: "Inovation HUB",
@@ -28,47 +42,122 @@ const experiences: ExperienceProps[] = [
   },
 ];
 
+const freelanceProjects: FreelanceProject[] = [
+  {
+    title: "Alma Djem Band Site",
+    description: "Development of the institutional website for the Alma Djem band with email capture API for show pre-sales",
+    link: "https://www.almadjem.com.br/",
+    technologies: "Typescript, React, Styled-Components, NodeJS, Docker, GoogleAPI's"
+  },
+  {
+    title: "Appointment Scheduler Bot",
+    description: "Customer service bot and appointment scheduling for a barbershop",
+    technologies: "Typescript, Fastify, Baileys, Docker, PostgreSQL"
+  }
+];
+
 // Configuração da animação de scroll
 const itemVariants = {
   hidden: { opacity: 0, y: 50 },
-  visible: (index: number) => ({
+  visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, delay: index * 0.2 },
-  }),
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
 };
 
 export function Experience() {
+  const [expandedFreelance, setExpandedFreelance] = useState(false);
+
   return (
     <div className="relative flex flex-col items-center w-full max-w-4xl">
       {/* Linha de conexão vertical */}
       <div className="absolute left-6 top-0 h-full w-[2px] bg-gray-600"></div>
 
-      <motion.div 
-        className="flex flex-col gap-16 w-full"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-      >
+      <div className="flex flex-col gap-16 w-full">
         {experiences.map((exp, index) => (
           <motion.div
             key={index}
             className="relative flex items-start gap-6 bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700"
             variants={itemVariants}
-            custom={index}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3, margin: "-100px" }}
+            transition={{ duration: 0.6, delay: 0.1 }}
           >
             {/* Bolinha da timeline */}
             <div className="absolute left-[-10px] w-4 h-4 bg-green-500 rounded-full"></div>
 
-            <div>
-              <h3 className="text-xl font-bold text-white">{exp.role}</h3>
-              <p className="text-gray-400">{exp.company}</p>
-              <p className="text-sm text-gray-300">{exp.period}</p>
-              <p className="text-gray-300 mt-2">{exp.description}</p>
+            <div className="w-full">
+              <div className="flex justify-between items-start">
+                <div>
+                  <h3 className="text-xl font-bold text-white">{exp.role}</h3>
+                  <p className="text-gray-400">{exp.company}</p>
+                  <p className="text-sm text-gray-300">{exp.period}</p>
+                  <p className="text-gray-300 mt-2">{exp.description}</p>
+                </div>
+                
+                {/* Botão de expansão apenas para freelance */}
+                {exp.company === "FreeLance" && (
+                  <button
+                    onClick={() => setExpandedFreelance(!expandedFreelance)}
+                    className="flex items-center gap-2 text-green-400 hover:text-green-300 transition-colors"
+                  >
+                    <span className="text-sm">
+                      {expandedFreelance ? "See Less" : "See Projects"}
+                    </span>
+                    <svg
+                      className={`w-4 h-4 transition-transform ${expandedFreelance ? 'rotate-180' : ''}`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                )}
+              </div>
+
+              {/* Projetos expandidos */}
+              {exp.company === "FreeLance" && expandedFreelance && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="mt-6 space-y-4"
+                >
+                  {freelanceProjects.map((project, projectIndex) => (
+                    <motion.div 
+                      key={projectIndex} 
+                      className="bg-gray-700 p-4 rounded-lg border border-gray-600"
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.4, delay: projectIndex * 0.1 }}
+                    >
+                      <h4 className="text-lg font-semibold text-white mb-2">{project.title}</h4>
+                      <p className="text-gray-300 mb-2">{project.description}</p>
+                      {project.link && (
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-green-400 hover:text-green-300 transition-colors text-sm"
+                        >
+                          See Project →
+                        </a>
+                      )}
+                      <p className="text-sm text-gray-400 mt-2">
+                        <span className="font-medium">Tecnologias:</span> {project.technologies}
+                      </p>
+                    </motion.div>
+                  ))}
+                </motion.div>
+              )}
             </div>
           </motion.div>
         ))}
-      </motion.div>
+      </div>
     </div>
   );
 }

@@ -5,7 +5,6 @@ import { Project } from "./components/Projects";
 import { Experience } from "./components/Experience";
 import { Skills } from "./components/Skills";
 import { Contact } from "./components/Contact";
-import { motion } from "framer-motion";
 import { Footer } from "./components/Footer";
 
 export function App() {

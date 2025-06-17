@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { FaTerminal, FaBars, FaTimes, FaGithub, FaChevronDown } from "react-icons/fa";
 import { useState, useEffect } from "react";
 
@@ -62,7 +62,7 @@ export function Header() {
       <motion.header 
         className={`w-full fixed top-0 left-0 z-50 border-b border-gray-700 border-b-gray-100/30 py-4 px-6 flex justify-between items-center transition-all duration-300 ${
           isOpen 
-            ? 'bg-white/95 backdrop-blur-sm text-blue-900' 
+            ? 'bg-white/95 backdrop-blur-sm text-gray-900' 
             : 'bg-white/15 text-white'
         }`}
         animate={{ 
@@ -73,7 +73,7 @@ export function Header() {
       >
         {/* Nome animado com ícone */}
         <div className="flex items-center gap-3 text-2xl sm:text-3xl font-bold">
-          <FaTerminal className={`text-4xl ${isOpen ? 'text-blue-600' : 'text-green-400'}`} />
+          <FaTerminal className={`text-4xl transition-colors duration-300 ${'text-green-400'}`} />
 
           <motion.div className="flex text-[22px] md:text-xl overflow-hidden">
             {letters.map((letter, index) => (
@@ -127,41 +127,49 @@ export function Header() {
 
         {/* Menu Mobile */}
         <div className="sm:hidden">
-          <button onClick={() => setIsOpen(!isOpen)} className={`text-3xl transition-colors ${isOpen ? 'text-blue-900' : 'text-white'}`}>
+          <button onClick={() => setIsOpen(!isOpen)} className={`text-3xl transition-colors duration-300 ${isOpen ? 'text-gray-900' : 'text-white'}`}>
             {isOpen ? <FaTimes /> : <FaBars />}
           </button>
         </div>
 
         {/* Menu Responsivo Mobile */}
-        {isOpen && (
-          <nav className="absolute top-full left-0 w-full bg-white/90 backdrop-blur-sm text-gray-800 flex flex-col items-center py-4 gap-4 sm:hidden">
-            <button onClick={() => scrollToSection("about")} className="hover:text-green-600 transition-all duration-300 font-medium">
-              About
-            </button>
-            <button onClick={() => scrollToSection("projects")} className="hover:text-green-600 transition-all duration-300 font-medium">
-              Projects
-            </button>
-            <button onClick={() => scrollToSection("experience")} className="hover:text-green-600 transition-all duration-300 font-medium">
-              Experience
-            </button>
-            <button onClick={() => scrollToSection("skills")} className="hover:text-green-600 transition-all duration-300 font-medium">
-              Skills
-            </button>
-            <button onClick={() => scrollToSection("contact")} className="hover:text-green-600 transition-all duration-300 font-medium">
-              Contact
-            </button>
-
-            {/* Ícone do GitHub no menu mobile */}
-            <a
-              href="https://github.com/samuka7abr"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-2xl text-gray-800 hover:text-green-600 transition mt-2"
+        <AnimatePresence>
+          {isOpen && (
+            <motion.nav
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+              className="absolute top-full left-0 w-full bg-white/90 backdrop-blur-sm text-gray-900 flex flex-col items-center py-4 gap-4 sm:hidden"
             >
-              <FaGithub />
-            </a>
-          </nav>
-        )}
+              <button onClick={() => scrollToSection("about")} className="hover:text-green-600 transition-all duration-300 font-medium">
+                About
+              </button>
+              <button onClick={() => scrollToSection("projects")} className="hover:text-green-600 transition-all duration-300 font-medium">
+                Projects
+              </button>
+              <button onClick={() => scrollToSection("experience")} className="hover:text-green-600 transition-all duration-300 font-medium">
+                Experience
+              </button>
+              <button onClick={() => scrollToSection("skills")} className="hover:text-green-600 transition-all duration-300 font-medium">
+                Skills
+              </button>
+              <button onClick={() => scrollToSection("contact")} className="hover:text-green-600 transition-all duration-300 font-medium">
+                Contact
+              </button>
+
+              {/* Ícone do GitHub no menu mobile */}
+              <a
+                href="https://github.com/samuka7abr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-2xl text-gray-900 hover:text-green-600 transition mt-2"
+              >
+                <FaGithub />
+              </a>
+            </motion.nav>
+          )}
+        </AnimatePresence>
       </motion.header>
 
       {/* Seta para expandir header (desktop e mobile) */}

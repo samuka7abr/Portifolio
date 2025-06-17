@@ -1,4 +1,4 @@
-import { FaLinkedin, FaEnvelope, FaDownload, FaMapMarkerAlt, FaPhone, FaGlobe } from "react-icons/fa";
+import { FaLinkedin, FaEnvelope, FaDownload, FaMapMarkerAlt, FaPhone, FaGlobe } from "react-icons/fa"; 
 import { motion } from "framer-motion";
 
 export function Contact() {

@@ -60,7 +60,7 @@ export function Header() {
     <>
       {/* Header Desktop */}
       <motion.header 
-        className={`w-full fixed top-0 left-0 z-50 border-b border-gray-700 border-b-gray-100/30 py-4 px-6 flex justify-between items-center transition-all duration-300 ${
+        className={`w-full fixed top-0 left-0 z-50 py-4 px-6 flex justify-between items-center transition-all duration-300 ${
           isOpen 
             ? 'bg-white/95 backdrop-blur-sm text-gray-900' 
             : 'bg-white/15 text-white'

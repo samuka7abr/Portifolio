@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
-import { FaCode, FaDatabase, FaServer, FaTools } from "react-icons/fa";
+import { FaCode, FaDatabase, FaServer, FaTools, FaWindows } from "react-icons/fa";
 import {
   SiJavascript, SiTypescript, SiPython, SiReact, SiExpress, SiFlask,
   SiSqlite, SiStyledcomponents, SiMysql, SiGit, SiKnexdotjs, SiLinux,
   SiPostman, SiInsomnia, SiNodedotjs, SiCplusplus, SiPostgresql,
   SiDocker, SiGithubactions, SiGithub, SiVim,
   SiDebian, SiUbuntu, SiFramer, SiTailwindcss, SiRedhat, SiPrisma,
-  SiFastify
+  SiFastify, SiGnubash
 } from "react-icons/si";
 import { VscVscodeInsiders } from "react-icons/vsc";
 import { useEffect, useState } from "react";
@@ -40,7 +40,7 @@ const skills = [
     techs: [
       { name: "Docker", icon: SiDocker },
       { name: "GitHub Actions", icon: SiGithubactions },
-      { name: "Shell Scripting", icon: FaTools },
+      { name: "Shell Scripting", icon: SiGnubash },
     ],
   },
   {
@@ -72,8 +72,8 @@ const skills = [
     techs: [
       { name: "Debian", icon: SiDebian },
       { name: "Ubuntu", icon: SiUbuntu },
-      { name: "Windows 10", icon: FaTools },
-      { name: "Rocky", icon: SiRedhat}
+      { name: "Rocky", icon: SiRedhat},
+      { name: "Windows 10", icon: FaWindows },
     ],
   },
   {

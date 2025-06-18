@@ -5,7 +5,8 @@ import {
   SiSqlite, SiStyledcomponents, SiMysql, SiGit, SiKnexdotjs, SiLinux,
   SiPostman, SiInsomnia, SiNodedotjs, SiCplusplus, SiPostgresql,
   SiDocker, SiGithubactions, SiGithub, SiVim,
-  SiDebian, SiUbuntu, SiFramer
+  SiDebian, SiUbuntu, SiFramer, SiTailwindcss, SiRedhat, SiPrisma,
+  SiFastify
 } from "react-icons/si";
 import { VscVscodeInsiders } from "react-icons/vsc";
 import { useEffect, useState } from "react";
@@ -29,7 +30,7 @@ const skills = [
     techs: [
       { name: "Node.js", icon: SiNodedotjs },
       { name: "Express", icon: SiExpress },
-      { name: "Fastify", icon: SiExpress },
+      { name: "Fastify", icon: SiFastify },
       { name: "Flask", icon: SiFlask },
     ],
   },
@@ -47,6 +48,7 @@ const skills = [
     icon: FaDatabase,
     techs: [
       { name: "PostgreSQL", icon: SiPostgresql },
+      { name: "Prisma", icon: SiPrisma},
       { name: "MySQL", icon: SiMysql },
       { name: "SQLite", icon: SiSqlite },
       { name: "Knex.js", icon: SiKnexdotjs },
@@ -71,6 +73,7 @@ const skills = [
       { name: "Debian", icon: SiDebian },
       { name: "Ubuntu", icon: SiUbuntu },
       { name: "Windows 10", icon: FaTools },
+      { name: "Rocky", icon: SiRedhat}
     ],
   },
   {
@@ -80,6 +83,7 @@ const skills = [
       { name: "React", icon: SiReact },
       { name: "CSS-in-JS", icon: SiStyledcomponents },
       { name: "Framer Motion", icon: SiFramer },
+      { name: "Tailwind", icon: SiTailwindcss},
     ],
   },
 ];

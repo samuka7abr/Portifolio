@@ -47,7 +47,7 @@ export function App() {
             />
             <Project 
               title="IDP-Connect Direct Message" 
-              description="Development of a messaging system for the fictional social network IDP-Connect. The backend is built with Python/Flask and MongoDB, focusing on a robust RESTful API. The JavaScript frontend uses WebSockets for real-time communication, aiming for a seamless user experience." 
+              description="Messaging system for IDP-Connect with real-time communication using WebSockets and a RESTful API built with Flask and MongoDB." 
               techs={["Python", "Flask", "MongoDB", "RabbitMQ", "Docker", "Web-Sockets", "Javascript"]} 
               repoLinks={["https://github.com/samuka7abr/IDP-BD-2025.1"]} 
             />

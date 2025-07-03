@@ -28,10 +28,10 @@ export function App() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
             <Project 
-              title="DishOrderAPI" 
-              description="RESTful API for managing restaurant orders, dishes and users in a digital restaurant system." 
-              techs={["Node.js", "JavaScript", "SQLite", "Knex.js"]} 
-              repoLinks={["https://github.com/samuka7abr/Dish-Order-Service"]} 
+              title="GymPass API" 
+              description="Copying GymPass API as a study for SOLID architecture, DevOps(Docker, CI/CD, Deploy) and Fastify." 
+              techs={["Node.js", "Typescript", "PostgreSQL", "PrismaORM", "Docker"]} 
+              repoLinks={["https://github.com/samuka7abr/Gympass-like-API"]} 
             />
             <Project 
               title="Alma Djem Band Site" 
@@ -46,10 +46,10 @@ export function App() {
               repoLinks={["https://github.com/samuka7abr/mini-FFmpeg"]} 
             />
             <Project 
-              title="E-commerce API" 
-              description="A RESTful API for an e-commerce platform." 
-              techs={["Python", "Flask", "SQLAlchemy", "SQLite"]} 
-              repoLinks={["https://github.com/samuka7abr/API-e-commerce"]} 
+              title="IDP-Connect Direct Message" 
+              description="Development of a messaging system for the fictional social network IDP-Connect. The backend is built with Python/Flask and MongoDB, focusing on a robust RESTful API. The JavaScript frontend uses WebSockets for real-time communication, aiming for a seamless user experience." 
+              techs={["Python", "Flask", "MongoDB", "RabbitMQ", "Docker", "Web-Sockets", "Javascript"]} 
+              repoLinks={["https://github.com/samuka7abr/IDP-BD-2025.1"]} 
             />
           </div>
         </section>

@@ -33,8 +33,7 @@ export function Profile() {
           </h2>
 
           <p className="mt-4 text-[16px] sm:text-[20px] text-gray-400 max-w-xs sm:max-w-2xl">
-            FullStack developer focused on writing clean, efficient, and scalable code. 
-            Passionate about problem-solving and building high-performance solutions.
+            FullStack Developer with a strong emphasis on architecting and building robust, scalable backend systems. Passionate about leveraging DevOps practices to ensure efficient deployments and operational excellence, while also proficient in crafting engaging frontend experiences for comprehensive solutions.
           </p>
         </div>
       </div>

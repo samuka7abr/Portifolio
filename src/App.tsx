@@ -36,7 +36,7 @@ export function App() {
             <Project 
               title="Alma Djem Band Site" 
               description="Institutional website and musical portfolio for Alma Djem band with modern design and responsive interface." 
-              techs={["React", "TypeScript", "Styled-Components", "Framer Motion"]} 
+              techs={["React", "TypeScript", "Styled-Components", "Framer Motion", "NodeJS", "GoogleAPIs"]} 
               repoLinks={["https://github.com/samuka7abr/Alma-Djem", "https://github.com/samuka7abr/Alma-Djem-Forms-API"]} 
             />
             <Project 

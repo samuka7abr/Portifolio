@@ -6,7 +6,7 @@ import {
   SiPostman, SiInsomnia, SiNodedotjs, SiCplusplus, SiPostgresql,
   SiDocker, SiGithubactions, SiGithub, SiVim,
   SiDebian, SiUbuntu, SiFramer, SiTailwindcss, SiRedhat, SiPrisma,
-  SiFastify, SiGnubash
+  SiFastify, SiGnubash, SiRabbitmq
 } from "react-icons/si";
 import { VscVscodeInsiders } from "react-icons/vsc";
 import { useEffect, useState } from "react";
@@ -41,6 +41,7 @@ const skills = [
       { name: "Docker", icon: SiDocker },
       { name: "GitHub Actions", icon: SiGithubactions },
       { name: "Shell Scripting", icon: SiGnubash },
+      {name: "RabbitMQ", icon: SiRabbitmq},
     ],
   },
   {

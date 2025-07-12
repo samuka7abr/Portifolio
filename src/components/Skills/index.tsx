@@ -6,7 +6,7 @@ import {
   SiPostman, SiInsomnia, SiNodedotjs, SiCplusplus, SiPostgresql,
   SiDocker, SiGithubactions, SiGithub, SiVim,
   SiDebian, SiUbuntu, SiFramer, SiTailwindcss, SiRedhat, SiPrisma,
-  SiFastify, SiGnubash, SiRabbitmq
+  SiFastify, SiGnubash, SiRabbitmq, SiNestjs,
 } from "react-icons/si";
 import { VscVscodeInsiders } from "react-icons/vsc";
 import { useEffect, useState } from "react";
@@ -32,6 +32,7 @@ const skills = [
       { name: "Express", icon: SiExpress },
       { name: "Fastify", icon: SiFastify },
       { name: "Flask", icon: SiFlask },
+      { name: "NestJS", icon: SiNestjs},
     ],
   },
   {

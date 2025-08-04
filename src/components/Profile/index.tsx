@@ -22,7 +22,7 @@ export function Profile() {
 
           <h2 className="text-[20px] sm:text-[28px] text-green-400 font-semibold mt-2 sm:mt-0">
             <Typewriter
-              words={["Software Engineer", "FullStack Web"]}
+              words={["Software Engineer", "FullStack Developer"]}
               loop={Infinity}
               cursor
               cursorStyle="_"

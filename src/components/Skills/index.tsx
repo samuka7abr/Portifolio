@@ -36,7 +36,7 @@ const skills = [
     ],
   },
   {
-    category: "DevSecOps & Infrastructure",
+    category: "DevOps & Infrastructure",
     icon: FaTools,
     techs: [
       { name: "Docker", icon: SiDocker },

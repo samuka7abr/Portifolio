@@ -17,9 +17,15 @@ interface FreelanceProject {
 
 const experiences: ExperienceProps[] = [
   {
-    role: "TSE Intern",
+    role: "Fullstack Developer",
+    company: "BlueOcean",
+    period: "2025.2 - Present",
+    description: "",
+  },
+  {
+    role: "Front-end Intern",
     company: "TSE",
-    period: "2025.1 - Present",
+    period: "2025.1 - 2025.2",
     description: "Working in the SGWEB area developing Front-End solutions, API integration, relational databases, REST APIs, Docker and other technologies using TypeScript, React, Tailwind CSS and Node.js.",
   },
   {

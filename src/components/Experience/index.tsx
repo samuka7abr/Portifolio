@@ -84,7 +84,7 @@ export function Experience() {
         {experiences.map((exp, index) => (
           <motion.div
             key={index}
-            className="relative flex items-start gap-6 bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700"
+            className="relative flex items-start gap-6 bg-[#0A0C15] p-6 rounded-lg shadow-lg border-[2px] border-[#13172A]"
             variants={itemVariants}
             initial="hidden"
             whileInView="visible"
@@ -136,7 +136,7 @@ export function Experience() {
                   {freelanceProjects.map((project, projectIndex) => (
                     <motion.div 
                       key={projectIndex} 
-                      className="bg-gray-700 p-4 rounded-lg border border-gray-600"
+                      className="bg-[#13172A] p-4 rounded-lg border border-gray-800"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.4, delay: projectIndex * 0.1 }}

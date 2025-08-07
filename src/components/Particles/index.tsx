@@ -16,7 +16,7 @@ const ParticlesBackground = () => {
       options={{
         background: {
           color: {
-            value: "#0f172a", // Cor do fundo (escura)
+            value: "#0A0C15", // Cor do fundo (escura)
           },
         },
         fpsLimit: 120,
@@ -28,7 +28,7 @@ const ParticlesBackground = () => {
             color: "#166534",
             distance: 150,
             enable: true,
-            opacity: 0.4,
+            opacity: 0.15,
             width: 1,
           },
           move: {
@@ -43,7 +43,7 @@ const ParticlesBackground = () => {
             value: 80,
           },
           opacity: {
-            value: 0.4, 
+            value: 0.15, 
           },
           size: {
             value: { min: 1, max: 3 },

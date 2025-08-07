@@ -11,7 +11,7 @@ interface ProjectProps {
 export function Project({ title, description, techs, repoLinks }: ProjectProps) {
   return (
     <motion.div
-      className="p-6 bg-gray-800/85 rounded-lg shadow-lg"
+      className="p-6 bg-[#0A0C15] rounded-lg shadow-lg border-[2px] border-[#13172A]"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3, margin: "-50px" }}

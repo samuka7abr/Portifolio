@@ -123,7 +123,7 @@ export function Skills() {
         {skills.map((group, index) => (
           <motion.div
             key={index}
-            className={`p-6 bg-gray-800 rounded-lg shadow-lg border border-gray-700 w-full max-w-sm ${
+            className={`p-6 bg-[#0A0C15] rounded-lg shadow-lg border-[2px] border-[#13172A] w-full max-w-sm ${
               index === skills.length - 1 && skills.length % 3 === 1 ? 'lg:col-start-2' : ''
             }`}
             whileHover={{ scale: 1.05 }}

@@ -63,7 +63,7 @@ export function Header() {
         className={`w-full fixed top-0 left-0 z-50 py-4 px-6 flex justify-between items-center transition-all duration-300 ${
           isOpen 
             ? 'bg-white/95 backdrop-blur-sm text-gray-900' 
-            : 'bg-white/15 text-white'
+            : 'bg-[#0A0C15] backdrop-filter: blur(50px) text-white border-b-[1px] border-[#13172A]'
         }`}
         animate={{ 
           y: isHeaderVisible ? 0 : -100,

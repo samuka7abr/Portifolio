@@ -50,7 +50,7 @@ export function Contact() {
         transition={{ duration: 1, ease: "easeOut" }}
       >
         {/* Informações de Contato */}
-        <div className="flex-1 bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-700">
+        <div className="flex-1 bg-[#0A0C15] p-8 rounded-lg shadow-lg border-[2px] border-[#13172A]">
           <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
           
           <div className="space-y-4">
@@ -85,7 +85,7 @@ export function Contact() {
         </div>
 
         {/* Redes Sociais e Download */}
-        <div className="flex-1 bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-700">
+        <div className="flex-1 bg-[#0A0C15]  p-8 rounded-lg shadow-lg border-[2px] border-[#13172A]">
           <h3 className="text-2xl font-bold text-white mb-6">Connect & Download</h3>
           
           {/* Redes Sociais */}
@@ -94,7 +94,7 @@ export function Contact() {
               href="https://x.com/samuca_tech" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="flex items-center gap-3 p-4 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors"
+              className="flex items-center gap-3 p-4 bg-[#0A0C15] rounded-lg border-[2px] border-[#13172A] hover:bg-[#121625] transition-colors"
             >
               <FaGlobe className="text-green-400 text-2xl" />
               <div>
@@ -107,7 +107,7 @@ export function Contact() {
               href="https://www.linkedin.com/in/samuel-abr%C3%A3o-0655a12ba/" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="flex items-center gap-3 p-4 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors"
+              className="flex items-center gap-3 p-4 bg-[#0A0C15] rounded-lg border-[2px] border-[#13172A] hover:bg-[#121625] transition-colors"
             >
               <FaLinkedin className="text-green-400 text-2xl" />
               <div>

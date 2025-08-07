@@ -62,7 +62,7 @@ export function Header() {
       <motion.header 
         className={`w-full fixed top-0 left-0 z-50 py-4 px-6 flex justify-between items-center transition-all duration-300 ${
           isOpen 
-            ? 'bg-white/95 backdrop-blur-sm text-gray-900' 
+            ? 'bg-[#13172A] backdrop-blur-sm text-white border-b-[1px] border-[#0A0C15]' 
             : 'bg-[#0A0C15] backdrop-filter: blur(50px) text-white border-b-[1px] border-[#13172A]'
         }`}
         animate={{ 
@@ -127,7 +127,7 @@ export function Header() {
 
         {/* Menu Mobile */}
         <div className="sm:hidden">
-          <button onClick={() => setIsOpen(!isOpen)} className={`text-3xl transition-colors duration-300 ${isOpen ? 'text-gray-900' : 'text-white'}`}>
+          <button onClick={() => setIsOpen(!isOpen)} className={`text-3xl transition-colors duration-300 ${isOpen ? 'text-white' : 'text-[#13172A]'}`}>
             {isOpen ? <FaTimes /> : <FaBars />}
           </button>
         </div>
@@ -140,12 +140,12 @@ export function Header() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="absolute top-full left-0 w-full bg-white/90 backdrop-blur-sm text-gray-900 flex flex-col items-center py-4 gap-4 sm:hidden"
+              className="absolute top-full left-0 w-full bg-[#13172A] backdrop-blur-sm text-white flex flex-col items-center py-4 gap-4 sm:hidden"
             >
               <button onClick={() => scrollToSection("about")} className="hover:text-green-600 transition-all duration-300 font-medium">
                 About
               </button>
-              <button onClick={() => scrollToSection("projects")} className="hover:text-green-600 transition-all duration-300 font-medium">
+              <button onClick={() => scrollToSection("projects")} className="hover:text-green-600 transition-all duration-300 font-medium   ">
                 Projects
               </button>
               <button onClick={() => scrollToSection("experience")} className="hover:text-green-600 transition-all duration-300 font-medium">
@@ -163,7 +163,7 @@ export function Header() {
                 href="https://github.com/samuka7abr"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-2xl text-gray-900 hover:text-green-600 transition mt-2"
+                className="text-2xl text-white hover:text-green-600 transition mt-2"
               >
                 <FaGithub />
               </a>

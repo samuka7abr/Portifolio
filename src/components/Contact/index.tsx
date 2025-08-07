@@ -10,7 +10,7 @@ export function Contact() {
 
       {/* Layout Mobile - Mantém o original */}
       <motion.div
-        className="flex flex-col items-center gap-6 bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-700 w-full max-w-md lg:hidden"
+        className="flex flex-col items-center gap-6 bg-[#0A0C15] p-8 rounded-lg shadow-lg border-[2px] border-[#13172A] w-full max-w-md lg:hidden"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}

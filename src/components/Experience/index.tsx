@@ -47,18 +47,6 @@ const experiences: ExperienceProps[] = [
         period: "2024.1 - Present",
         description: "Developing scalable applications with NodeJs(Express, Fastify, KnexJs), Docker, PostgreSQL, React(Styled-Components & Tailwind CSS) and Python(Flask, SQLAlchemy).",
     },
-    {
-        role: "Inovation HUB",
-        company: "IDP",
-        period: "2024.2",
-        description: "I participated in a project aimed at combating websites that used deceptive bonus-based advertisements, violating Law No. 14.790/2023. The solution involved developing an advanced web scraper to detect and flag fraudulent websites. Additionally, we created an integrated browser extension that automatically blocked access to these sites, enhancing user security. (Typescript, Javascript)",
-    },
-    {
-        role: "IDP Social",
-        company: "IDP",
-        period: "2024.1",
-        description: "I participated in the IDP Social initiative, where we built a document management system using Python and MySQL to organize records for underprivileged children. The system streamlined document storage and retrieval, reducing disorganization and ensuring easy access to vital records.",
-    },
 ];
 
 const freelanceProjects: FreelanceProject[] = [

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { FaCode, FaDatabase, FaServer, FaTools, FaWindows } from "react-icons/fa";
-import { SiCplusplus, SiDebian, SiDocker, SiExpress, SiFastify, SiFlask, SiFramer, SiGit, SiGithub, SiGithubactions, SiGnubash, SiGo, SiInsomnia, SiJavascript, SiLinux, SiMysql, SiNestjs, SiNodedotjs, SiPostgresql, SiPostman, SiPrisma, SiPython, SiRabbitmq, SiReact, SiRedhat, SiStyledcomponents, SiTailwindcss, SiTypescript, SiUbuntu, SiVim, } from "react-icons/si";
+import { SiAmazondynamodb, SiCplusplus, SiDebian, SiDocker, SiExpress, SiFastapi, SiFastify, SiFlask, SiFramer, SiGit, SiGithub, SiGithubactions, SiGnubash, SiGo, SiInsomnia, SiJavascript, SiKubernetes, SiLinux, SiMysql, SiNestjs, SiNodedotjs, SiPostgresql, SiPostman, SiPrisma, SiPython, SiRabbitmq, SiReact, SiRedhat, SiStyledcomponents, SiTailwindcss, SiTypescript, SiUbuntu, SiVim, } from "react-icons/si";
 import { VscVscodeInsiders } from "react-icons/vsc";
 
 
@@ -26,6 +26,7 @@ const skills = [
             { name: "Express", icon: SiExpress },
             { name: "Fastify", icon: SiFastify },
             { name: "Flask", icon: SiFlask },
+            { name: "FastAPI", icon: SiFastapi },
             { name: "NestJS", icon: SiNestjs },
             { name: "Laravel", icon: FaServer },
         ],
@@ -35,6 +36,7 @@ const skills = [
         icon: FaTools,
         techs: [
             { name: "Docker", icon: SiDocker },
+            { name: "Kubernetes", icon: SiKubernetes },
             { name: "GitHub Actions", icon: SiGithubactions },
             { name: "Shell Scripting", icon: SiGnubash },
             { name: "RabbitMQ", icon: SiRabbitmq },
@@ -50,6 +52,7 @@ const skills = [
             { name: "MySQL", icon: SiMysql },
             { name: "Redis", icon: SiMysql },
             { name: "MongoDB", icon: SiPostgresql },
+            { name: "DynamoDB", icon: SiAmazondynamodb },
         ],
     },
     {

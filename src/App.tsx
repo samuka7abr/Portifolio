@@ -29,7 +29,7 @@ export function App() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
                         <Project
                             title="GymPass API"
-                            description="Copying GymPass API as a study for SOLID architecture, DevOps(Docker, CI/CD, Deploy) and Fastify."
+                            description="GymPass API is a comprehensive fitness membership system built as a case study for SOLID architecture principles and best practices. The project implements secure authentication, role-based authorization, and complex business logic for gym management. Developed with Fastify for high performance, PostgreSQL for data persistence, and fully containerized with Docker for seamless deployment and CI/CD integration."
                             techs={["Node.js", "Typescript", "PostgreSQL", "PrismaORM", "Docker"]}
                             repoLinks={["https://github.com/samuka7abr/Gympass-like-API"]}
                         />
@@ -41,7 +41,7 @@ export function App() {
                         />
                         <Project
                             title="Mini FFmpeg"
-                            description="A lightweight FFmpeg implementation for video processing and manipulation."
+                            description="Mini FFmpeg is a lightweight implementation of core video processing and manipulation features built from scratch in C and Assembly. The project focuses on optimizing performance through low-level operations while maintaining clean architecture and efficient memory management. It demonstrates expertise in systems programming, algorithm optimization, and building multimedia processing pipelines with custom shell scripts for orchestration."
                             techs={["C", "Assembly", "ShellScript"]}
                             repoLinks={["https://github.com/samuka7abr/mini-FFmpeg"]}
                         />

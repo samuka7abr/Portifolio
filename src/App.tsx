@@ -1,3 +1,4 @@
+import { Routes, Route } from "react-router-dom";
 import { Header } from "./components/Header";
 import { Profile } from "./components/Profile";
 import ParticlesBackground from "./components/Particles";
@@ -6,8 +7,9 @@ import { Experience } from "./components/Experience";
 import { Skills } from "./components/Skills";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
+import { LinktreePage } from "./pages/Linktree";
 
-export function App() {
+function Portfolio() {
     return (
         <>
             <ParticlesBackground />
@@ -28,10 +30,10 @@ export function App() {
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
                         <Project
-                            title="GymPass API"
-                            description="GymPass API is a comprehensive fitness membership system built as a case study for SOLID architecture principles and best practices. The project implements secure authentication, role-based authorization, and complex business logic for gym management. Developed with Fastify for high performance, PostgreSQL for data persistence, and fully containerized with Docker for seamless deployment and CI/CD integration."
-                            techs={["Node.js", "Typescript", "PostgreSQL", "PrismaORM", "Docker"]}
-                            repoLinks={["https://github.com/samuka7abr/Gympass-like-API"]}
+                            title="Service Marketplace"
+                            description="Production-ready REST API for a services marketplace built with NestJS, DynamoDB (Single Table Design), S3, and SNS/SES. Implements Clean Architecture, SOLID principles, Infrastructure as Code (Terraform), and deployment on Kubernetes with auto-scaling. Uses LocalStack for local development + complete Kubernetes manifests. "
+                            techs={["Nest.js", "Typescript", "DynamoDB", "TypeORM", "Docker", "AWS", "Kubernetes", "Terraform"]}
+                            repoLinks={["https://github.com/samuka7abr/Service-Marketplace"]}
                         />
                         <Project
                             title="Argos Panoptes"
@@ -79,6 +81,15 @@ export function App() {
                 </section>
             </div>
         </>
+    );
+}
+
+export function App() {
+    return (
+        <Routes>
+            <Route path="/" element={<Portfolio />} />
+            <Route path="/links" element={<LinktreePage />} />
+        </Routes>
     );
 }
 
